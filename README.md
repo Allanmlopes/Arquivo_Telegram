@@ -15,7 +15,8 @@ password="Sua_senha_de_banco"
 
 database="Seu_database"
 
-#Arquivo 2 = Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv:
+# Arquivo 2 
+== Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv ==
 
  #!/bin/bash
 
@@ -23,10 +24,12 @@ database="Seu_database"
 
 #Obtendo a data atual 
 current_date=$(date +"%Y-%m-%d")
+
 current_month=$(date +"%Y-%m-01")
 
 #Calculando o primeiro dia e o último dia do mês atual
 start_date="${current_month} 00:00:00"
+
 end_date=$(date -d "$current_month +1 month -1 second" +"%Y-%m-%d %H:%M:%S")
 
 #Criando um nome de arquivo com a data do mês
