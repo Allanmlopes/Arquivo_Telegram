@@ -7,9 +7,9 @@
 # Arquivo 1 = Arquivo Client 
 
 [client]
-user="seu_usuario_de_banco";
-password="Sua_senha_de_banco";
-database="Seu_database";
+user="seu_usuario_de_banco"\n
+password="Sua_senha_de_banco"\n
+database="Seu_database"\n
 
 # Arquivo 2 = Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv:
 
