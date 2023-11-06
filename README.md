@@ -1,17 +1,17 @@
-exi# Arquivo_Telegram
+# Arquivo_Telegram
 
-=== Extraindo dados de um banco atraves do Mysql direcionando a saida para um arquivo.csv e encaminhando para um chat do telegran atraves da API ===
-=== Para executar os scripts, deverão estar na mesma pasta ===
+-  Extraindo dados de um banco atraves do Mysql direcionando a saida para um arquivo.csv e encaminhando para um chat do telegran atraves da API ===
+- Para executar os scripts, deverão estar na mesma pasta ===
 
 
-#Arquivo 1 ================= Arquivo Client =============================================
+# Arquivo 1 = Arquivo Client 
 
 [client]
 user="seu_usuario_de_banco"
 password="Sua_senha_de_banco"
 database="Seu_database"
 
-#Arquivo 2 =============== Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv
+# Arquivo 2 = Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv:
 
  #!/bin/bash
 
@@ -32,11 +32,11 @@ output_filename="./Pesquisa/Pesquisa_$(date +"%Y-%m").csv"
 mysql --defaults-file=mysql_options.cnf -D "$database" -e "SELECT id, data, id_pesquisa, id_service, id_resposta, nota_resposta, CONCAT('Ramal ', operador) AS operador FROM pesquisa WHERE data BETWEEN 
 '$start_date' AND '$end_date';" > "$output_filename"
 
-#Arquivo 3 ============ Este Script lê a API do telegram converte para limguagem de maquina e envia para o telegram =============================================================================
+# Arquivo 3 = Este Script lê a API do telegram converte para limguagem de maquina e envia para o telegram:
 
 
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+-*- coding: utf-8 -*-
 import telegram
 from telegram import InputFile
 import asyncio
