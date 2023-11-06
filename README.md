@@ -4,7 +4,8 @@
 - Para executar os scripts, deverão estar na mesma pasta ===
 
 
-#Arquivo 1 = Arquivo Client 
+# Arquivo 1  
+==Arquivo Client==
 
 [client]
 user="seu_usuario_de_banco"
