@@ -40,6 +40,7 @@ output_filename="./Pesquisa/Pesquisa_$(date +"%Y-%m").csv"
 
 #Executando o comando MySQL e redirecione a saída para o arquivo:
 
+
 mysql --defaults-file=mysql_options.cnf -D "$database" -e "SELECT id, data, id_pesquisa, id_service, id_resposta, nota_resposta, CONCAT('Ramal ', operador) AS operador FROM pesquisa WHERE data BETWEEN 
 '$start_date' AND '$end_date';" > "$output_filename"
 
