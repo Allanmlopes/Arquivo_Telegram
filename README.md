@@ -4,16 +4,16 @@ exi# Arquivo_Telegram
 === Para executar os scripts, deverão estar na mesma pasta ===
 
 
-#Arquivo 1 ================= Arquivo Client ======================================================================================================================================================##
+#Arquivo 1 ================= Arquivo Client =============================================
 
 [client]
 user="seu_usuario_de_banco"
 password="Sua_senha_de_banco"
 database="Seu_database"
 
-#Arquivo 2 =============== Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv ======================================================
+#Arquivo 2 =============== Script para executar no inicio do mes, buscando dados do mes anterior e direcionando a saida para um arquivo.csv
 
-#!/bin/bash
+ #!/bin/bash
 
 database="Seu_database"
 
